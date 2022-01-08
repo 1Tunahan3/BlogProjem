@@ -1,0 +1,29 @@
+﻿@model Entity.Concrete.Blog
+@{
+    ViewData["Title"] = "EditBlog";
+    Layout = "~/Views/Shared/AuthorLayout.cshtml";
+}
+
+<h1>Edit Blog</h1>
+
+@using (Html.BeginForm("EditBlog", "Blog", FormMethod.Post))
+{
+    @Html.Label("Blog Id")
+    @Html.TextBoxFor(x => x.BlogID)
+
+    @Html.Label("Blog Title")
+    @Html.TextBoxFor(x => x.BlogTitle)
+
+    @Html.Label("Blog Image")
+    @Html.TextBoxFor(x => x.BlogImage)
+
+    @Html.Label("Blog Category")
+    @Html.TextBoxFor(x => x.CategoryID)
+
+    @Html.Label("Blog Content")
+    @Html.TextBoxFor(x => x.BlogContent)
+
+
+    <button class="btn-dribbble"> Update</button>
+}
+
